@@ -66,12 +66,12 @@
 // プッシュ通知を受信した際の処理
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     if(application.applicationState == UIApplicationStateInactive){
-        //バックグラウンドにいる状態
+        // バックグラウンドにいる状態でPush通知を受け取った
         [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
         [[UIApplication sharedApplication] cancelAllLocalNotifications];
         
     }else if(application.applicationState == UIApplicationStateActive){
-        //ばりばり動いている時
+        // フォアグラウンドで通知を受け取った
         
     }
 #if !TARGET_IPHONE_SIMULATOR
