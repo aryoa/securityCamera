@@ -19,6 +19,8 @@
     // アプリケーションが起動するたびに、デバイストークンを要求してそれをプロバイダに渡すことで、
     // プロバイダが最新のデバイストークンを持つことを保証
     [application registerForRemoteNotificationTypes: (UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
+    
+
     return YES;
 }
 							
@@ -55,6 +57,7 @@
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) devToken
 {
     NSLog(@"deviceToken: %@", devToken);
+    
 }
 
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *) err

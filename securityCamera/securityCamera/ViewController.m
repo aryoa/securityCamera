@@ -9,7 +9,6 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIWebView *myFirstWebView;
 
 @end
 
@@ -18,16 +17,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    NSString* urlString = @"http://ryo-0106.mydns.jp/video/video.html";
-    NSURL* myVideo = [NSURL URLWithString: urlString];
-    
-    NSURLRequest *myRequest = [ NSURLRequest requestWithURL:myVideo cachePolicy: NSURLRequestReloadIgnoringLocalCacheData timeoutInterval: 180.0 ];
-    
-    // htmlのvideoタグのautoplayを有効にするために必要
-    [self.myFirstWebView setMediaPlaybackRequiresUserAction:NO];
-
-    [self.myFirstWebView loadRequest:myRequest];
 }
 
 - (void)didReceiveMemoryWarning

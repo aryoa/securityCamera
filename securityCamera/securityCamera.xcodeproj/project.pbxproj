@@ -21,6 +21,18 @@
 		2A9120441958435E0010699C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9120261958435E0010699C /* UIKit.framework */; };
 		2A91204C1958435E0010699C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A91204A1958435E0010699C /* InfoPlist.strings */; };
 		2A91204E1958435E0010699C /* securityCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A91204D1958435E0010699C /* securityCameraTests.m */; };
+		2AD11E161997E72900B57E74 /* WatchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD11E151997E72900B57E74 /* WatchingViewController.m */; };
+		2AD11E181997E7CE00B57E74 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD11E171997E7CE00B57E74 /* AVFoundation.framework */; };
+		2AD11E1A1997E7D600B57E74 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD11E191997E7D600B57E74 /* CoreVideo.framework */; };
+		2AD11E1C1997E7DF00B57E74 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD11E1B1997E7DF00B57E74 /* CoreMedia.framework */; };
+		2AD11E1E1997E7E800B57E74 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD11E1D1997E7E800B57E74 /* CoreImage.framework */; };
+		2AD11E2119991B2500B57E74 /* ViewingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD11E2019991B2500B57E74 /* ViewingViewController.m */; };
+		2AD11E2419993C4700B57E74 /* SECURITY_CAMERA.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD11E2319993C4700B57E74 /* SECURITY_CAMERA.png */; };
+		2AD11E2819993D7D00B57E74 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD11E2519993D7D00B57E74 /* icon-60@2x.png */; };
+		2AD11E2919993D7D00B57E74 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD11E2619993D7D00B57E74 /* icon.png */; };
+		2AD11E2A19993D7D00B57E74 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD11E2719993D7D00B57E74 /* icon@2x.png */; };
+		2AD11E2C199945AA00B57E74 /* rotation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AD11E2B199945AA00B57E74 /* rotation.jpg */; };
+		2AD11E2E19994ADA00B57E74 /* icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD11E2D19994ADA00B57E74 /* icon-60.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +65,20 @@
 		2A9120491958435E0010699C /* securityCameraTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "securityCameraTests-Info.plist"; sourceTree = "<group>"; };
 		2A91204B1958435E0010699C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A91204D1958435E0010699C /* securityCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = securityCameraTests.m; sourceTree = "<group>"; };
+		2AD11E141997E72900B57E74 /* WatchingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchingViewController.h; sourceTree = "<group>"; };
+		2AD11E151997E72900B57E74 /* WatchingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchingViewController.m; sourceTree = "<group>"; };
+		2AD11E171997E7CE00B57E74 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2AD11E191997E7D600B57E74 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		2AD11E1B1997E7DF00B57E74 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		2AD11E1D1997E7E800B57E74 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		2AD11E1F19991B2500B57E74 /* ViewingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewingViewController.h; sourceTree = "<group>"; };
+		2AD11E2019991B2500B57E74 /* ViewingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewingViewController.m; sourceTree = "<group>"; };
+		2AD11E2319993C4700B57E74 /* SECURITY_CAMERA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SECURITY_CAMERA.png; path = image/SECURITY_CAMERA.png; sourceTree = "<group>"; };
+		2AD11E2519993D7D00B57E74 /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60@2x.png"; path = "image/icon-60@2x.png"; sourceTree = "<group>"; };
+		2AD11E2619993D7D00B57E74 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = image/icon.png; sourceTree = "<group>"; };
+		2AD11E2719993D7D00B57E74 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "image/icon@2x.png"; sourceTree = "<group>"; };
+		2AD11E2B199945AA00B57E74 /* rotation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rotation.jpg; path = image/rotation.jpg; sourceTree = "<group>"; };
+		2AD11E2D19994ADA00B57E74 /* icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60.png"; path = "image/icon-60.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +86,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD11E1E1997E7E800B57E74 /* CoreImage.framework in Frameworks */,
+				2AD11E1C1997E7DF00B57E74 /* CoreMedia.framework in Frameworks */,
+				2AD11E1A1997E7D600B57E74 /* CoreVideo.framework in Frameworks */,
+				2AD11E181997E7CE00B57E74 /* AVFoundation.framework in Frameworks */,
 				2A9120251958435E0010699C /* CoreGraphics.framework in Frameworks */,
 				2A9120271958435E0010699C /* UIKit.framework in Frameworks */,
 				2A9120231958435E0010699C /* Foundation.framework in Frameworks */,
@@ -101,6 +131,10 @@
 		2A9120211958435E0010699C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AD11E1D1997E7E800B57E74 /* CoreImage.framework */,
+				2AD11E1B1997E7DF00B57E74 /* CoreMedia.framework */,
+				2AD11E191997E7D600B57E74 /* CoreVideo.framework */,
+				2AD11E171997E7CE00B57E74 /* AVFoundation.framework */,
 				2A9120221958435E0010699C /* Foundation.framework */,
 				2A9120241958435E0010699C /* CoreGraphics.framework */,
 				2A9120261958435E0010699C /* UIKit.framework */,
@@ -112,6 +146,7 @@
 		2A9120281958435E0010699C /* securityCamera */ = {
 			isa = PBXGroup;
 			children = (
+				2AD11E2219993C2800B57E74 /* image */,
 				2A9120311958435E0010699C /* AppDelegate.h */,
 				2A9120321958435E0010699C /* AppDelegate.m */,
 				2A9120341958435E0010699C /* Main.storyboard */,
@@ -119,6 +154,10 @@
 				2A9120381958435E0010699C /* ViewController.m */,
 				2A91203A1958435E0010699C /* Images.xcassets */,
 				2A9120291958435E0010699C /* Supporting Files */,
+				2AD11E141997E72900B57E74 /* WatchingViewController.h */,
+				2AD11E151997E72900B57E74 /* WatchingViewController.m */,
+				2AD11E1F19991B2500B57E74 /* ViewingViewController.h */,
+				2AD11E2019991B2500B57E74 /* ViewingViewController.m */,
 			);
 			path = securityCamera;
 			sourceTree = "<group>";
@@ -150,6 +189,19 @@
 				2A91204A1958435E0010699C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AD11E2219993C2800B57E74 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				2AD11E2B199945AA00B57E74 /* rotation.jpg */,
+				2AD11E2519993D7D00B57E74 /* icon-60@2x.png */,
+				2AD11E2D19994ADA00B57E74 /* icon-60.png */,
+				2AD11E2619993D7D00B57E74 /* icon.png */,
+				2AD11E2719993D7D00B57E74 /* icon@2x.png */,
+				2AD11E2319993C4700B57E74 /* SECURITY_CAMERA.png */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +280,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD11E2A19993D7D00B57E74 /* icon@2x.png in Resources */,
+				2AD11E2819993D7D00B57E74 /* icon-60@2x.png in Resources */,
 				2A91203B1958435E0010699C /* Images.xcassets in Resources */,
+				2AD11E2C199945AA00B57E74 /* rotation.jpg in Resources */,
+				2AD11E2919993D7D00B57E74 /* icon.png in Resources */,
+				2AD11E2E19994ADA00B57E74 /* icon-60.png in Resources */,
 				2A91202D1958435E0010699C /* InfoPlist.strings in Resources */,
+				2AD11E2419993C4700B57E74 /* SECURITY_CAMERA.png in Resources */,
 				2A9120361958435E0010699C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,8 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9120391958435E0010699C /* ViewController.m in Sources */,
+				2AD11E2119991B2500B57E74 /* ViewingViewController.m in Sources */,
 				2A9120331958435E0010699C /* AppDelegate.m in Sources */,
 				2A91202F1958435E0010699C /* main.m in Sources */,
+				2AD11E161997E72900B57E74 /* WatchingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
