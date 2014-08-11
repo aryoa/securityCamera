@@ -10,7 +10,7 @@
 
 @import AVFoundation;
 
-#define MAX_INDEX 3
+#define MAX_INDEX 5
 
 @interface ViewingViewController ()
 @property (weak, nonatomic) IBOutlet UIView *previewView;
@@ -26,6 +26,7 @@
 - (IBAction)rotationClick:(id)sender;
 
 @property int video_index;
+@property int last_index;
 
 
 @end
@@ -47,7 +48,7 @@
     // Do any additional setup after loading the view.
     
     self.player = [[AVQueuePlayer alloc] init];
-    self.video_index = 1;
+    self.video_index = 0;
     
     self.previewView.frame = CGRectMake(0, 0, 220, 220);
     self.previewView.transform = CGAffineTransformMakeRotation(M_PI/2);
@@ -98,25 +99,49 @@
         return;
     }
     
+    if (index == self.video_index){
+        UIAlertView *alert =
+        [[UIAlertView alloc]
+         initWithTitle:@"タイトル"
+         message:@"再ロード/監視停止"
+         delegate:nil
+         cancelButtonTitle:nil
+         otherButtonTitles:@"OK", nil
+         ];
+        [alert show];
+        return;
+    }
     
+    self.video_index = index;
+    
+
+    self.video_index = index;
     if (self.playItems  == nil){
         // 1
         self.playItems = [[NSMutableArray alloc] init];
     }else{
         [self.playItems removeAllObjects];
     }
-    for (int i = 0; i < MAX_INDEX; i++)
-    {
-        if ((index + i) >  MAX_INDEX){
-            index = 1;
-        }
-        NSString *path = [NSString stringWithFormat:@"http://192.168.1.5/updateVideo/videos/output%d.MOV", index + i];
-        NSURL *url = [NSURL URLWithString:path];
-        
-        // 2
-        AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
-        [self.playItems addObject:item];
-    }
+
+    NSString *path = [NSString stringWithFormat:@"http://192.168.1.5/updateVideo/videos/output%d.MOV", index];
+    NSURL *url = [NSURL URLWithString:path];
+    
+    // 2
+    AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
+    [self.playItems addObject:item];
+
+//    for (int i = 0; i < MAX_INDEX; i++)
+//    {
+//        if ((index + i) >  MAX_INDEX){
+//            index = 1 - i;
+//        }
+//        NSString *path = [NSString stringWithFormat:@"http://192.168.1.5/updateVideo/videos/output%d.MOV", index + i];
+//        NSURL *url = [NSURL URLWithString:path];
+//        
+//        // 2
+//        AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
+//        [self.playItems addObject:item];
+//    }
     
     
     // 1
@@ -163,12 +188,13 @@
 - (void)onVideoEnd
 {
     NSLog(@"video end:%d", self.video_index);
-    
-    if (self.video_index == MAX_INDEX){
-        self.video_index = 1;
-        [self setupPlayer];
-    }
-    self.video_index++;
+//    self.video_index++;
+//
+//    if (self.video_index > MAX_INDEX){
+//        self.video_index = 1;
+//    }
+    [self setupPlayer];
+
 }
 
 
@@ -258,7 +284,7 @@
     // リクエスト結果を表示する
     NSLog(@"request finished!!");
     NSLog(@"error = %@", error);
-    NSLog(@"statusCode = %d", ((NSHTTPURLResponse *)response).statusCode);
+    NSLog(@"statusCode = %ld", (long)((NSHTTPURLResponse *)response).statusCode);
     NSLog(@"responseText = %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
