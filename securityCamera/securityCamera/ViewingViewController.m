@@ -50,7 +50,7 @@
     self.player = [[AVQueuePlayer alloc] init];
     self.video_index = 0;
     
-    self.previewView.frame = CGRectMake(0, 0, 220, 220);
+    self.previewView.frame = CGRectMake(0, 0, 300, 245);
     self.previewView.transform = CGAffineTransformMakeRotation(M_PI/2);
 
 
@@ -122,8 +122,13 @@
     }else{
         [self.playItems removeAllObjects];
     }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *server = [defaults stringForKey:@"SERVER"];
+    
+    
 
-    NSString *path = [NSString stringWithFormat:@"http://192.168.1.5/updateVideo/videos/output%d.MOV", index];
+    NSString *path = [NSString stringWithFormat:@"%@/updateVideo/videos/output%d.MOV", server, index];
     NSURL *url = [NSURL URLWithString:path];
     
     // 2
@@ -259,7 +264,12 @@
 -(NSString *)getIndexFromSever
 {
     // 送信するリクエストを作成する。
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.5/updateVideo/videos/index.txt"];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *server = [defaults stringForKey:@"SERVER"];
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@/updateVideo/videos/index.txt",server];
+    
+    NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     // リクエストを送信する。

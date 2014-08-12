@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Toolbox.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,11 @@
     // アプリケーションが起動するたびに、デバイストークンを要求してそれをプロバイダに渡すことで、
     // プロバイダが最新のデバイストークンを持つことを保証
     [application registerForRemoteNotificationTypes: (UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:SERVER forKey:@"SERVER"];
+    
     
 
     return YES;

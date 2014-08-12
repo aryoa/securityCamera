@@ -395,7 +395,15 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     
     
     //送信先URL
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.5/updateVideo/updateVideo.php"];
+    // 送信するリクエストを作成する。
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *server = [defaults stringForKey:@"SERVER"];
+    
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@/updateVideo/updateVideo.php",server];
+    
+    
+    NSURL *url = [NSURL URLWithString:urlString];
     
     
     
@@ -509,7 +517,15 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 -(void)sendApplePushNotification
 {
     // 送信するリクエストを作成する。
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.5/securityCamera/sample_push.php"];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *server = [defaults stringForKey:@"SERVER"];
+    
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@/securityCamera/sample_push.php",server];
+
+    
+    
+    NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     // リクエストを送信する。
@@ -521,7 +537,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     // エラー処理は、上の非同期リクエストと同じ感じで。
     NSLog(@"request finished!!");
     NSLog(@"error = %@", error);
-    NSLog(@"statusCode = %d", ((NSHTTPURLResponse *)response).statusCode);
+    NSLog(@"statusCode = %ld", (long)((NSHTTPURLResponse *)response).statusCode);
     NSLog(@"responseText = %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     
 }
