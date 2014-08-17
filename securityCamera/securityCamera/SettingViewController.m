@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *SettingText;
 - (IBAction)DoneClick:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UITextField *VideoTimeText;
 @end
 
 @implementation SettingViewController
@@ -55,8 +56,11 @@
 - (IBAction)DoneClick:(id)sender {
     NSLog(@"%s", __func__);
     NSLog(@"%@", self.SettingText.text );
+    NSLog(@"%@", self.VideoTimeText.text );
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:self.SettingText.text forKey:@"SERVER"];
+    [defaults setObject:self.VideoTimeText.text forKey:@"VIDEOTIME"];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     

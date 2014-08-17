@@ -67,7 +67,12 @@
     
     
     // タイマーを作成してスタート
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:20.0f
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *videotime = [defaults stringForKey:@"VIDEOTIME"];
+
+    float v_time = [videotime floatValue];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:v_time
                                      target:self
                                    selector:@selector(writeData)
                                     userInfo:nil
@@ -516,29 +521,33 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 
 -(void)sendApplePushNotification
 {
-    // 送信するリクエストを作成する。
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *server = [defaults stringForKey:@"SERVER"];
-    
-    
-    NSString *urlString = [NSString stringWithFormat:@"%@/securityCamera/sample_push.php",server];
+    dispatch_queue_t sub_queue = dispatch_queue_create("sub_queue", 0);
+    dispatch_async(sub_queue, ^{
+        
+        // 送信するリクエストを作成する。
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *server = [defaults stringForKey:@"SERVER"];
 
-    
-    
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    
-    // リクエストを送信する。
-    NSError *error;
-    NSURLResponse *response;
-    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    
-    // リクエスト結果を表示する。
-    // エラー処理は、上の非同期リクエストと同じ感じで。
-    NSLog(@"request finished!!");
-    NSLog(@"error = %@", error);
-    NSLog(@"statusCode = %ld", (long)((NSHTTPURLResponse *)response).statusCode);
-    NSLog(@"responseText = %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+
+        NSString *urlString = [NSString stringWithFormat:@"%@/securityCamera/sample_push.php",server];
+
+
+
+        NSURL *url = [NSURL URLWithString:urlString];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+
+        // リクエストを送信する。
+        NSError *error;
+        NSURLResponse *response;
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+
+        // リクエスト結果を表示する。
+        // エラー処理は、上の非同期リクエストと同じ感じで。
+        NSLog(@"request finished!!");
+        NSLog(@"error = %@", error);
+        NSLog(@"statusCode = %ld", (long)((NSHTTPURLResponse *)response).statusCode);
+        NSLog(@"responseText = %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    });
     
 }
 

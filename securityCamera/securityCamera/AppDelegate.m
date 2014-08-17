@@ -24,6 +24,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:SERVER forKey:@"SERVER"];
+    [defaults setObject:VIDEOTIME forKey:@"VIDEOTIME"];
     
     
 

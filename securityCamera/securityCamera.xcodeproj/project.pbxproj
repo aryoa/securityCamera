@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A187E7719A0565B0004861C /* SECURITY_CAMERA_READY.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A187E7619A0565B0004861C /* SECURITY_CAMERA_READY.png */; };
 		2A9120231958435E0010699C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9120221958435E0010699C /* Foundation.framework */; };
 		2A9120251958435E0010699C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9120241958435E0010699C /* CoreGraphics.framework */; };
 		2A9120271958435E0010699C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9120261958435E0010699C /* UIKit.framework */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A187E7619A0565B0004861C /* SECURITY_CAMERA_READY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SECURITY_CAMERA_READY.png; path = image/SECURITY_CAMERA_READY.png; sourceTree = "<group>"; };
 		2A91201F1958435E0010699C /* securityCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = securityCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9120221958435E0010699C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A9120241958435E0010699C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -210,6 +212,7 @@
 				2AD11E2619993D7D00B57E74 /* icon.png */,
 				2AD11E2719993D7D00B57E74 /* icon@2x.png */,
 				2AD11E2319993C4700B57E74 /* SECURITY_CAMERA.png */,
+				2A187E7619A0565B0004861C /* SECURITY_CAMERA_READY.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				2AD11E2C199945AA00B57E74 /* rotation.jpg in Resources */,
 				2AD11E2919993D7D00B57E74 /* icon.png in Resources */,
 				2AD11E2E19994ADA00B57E74 /* icon-60.png in Resources */,
+				2A187E7719A0565B0004861C /* SECURITY_CAMERA_READY.png in Resources */,
 				2A91202D1958435E0010699C /* InfoPlist.strings in Resources */,
 				2AD11E2419993C4700B57E74 /* SECURITY_CAMERA.png in Resources */,
 				2A9120361958435E0010699C /* Main.storyboard in Resources */,

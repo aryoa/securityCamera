@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define SERVER @"http://ryo-0106.mydns.jp"
+#define VIDEOTIME @"10"
 
 @interface Toolbox : NSObject
 
